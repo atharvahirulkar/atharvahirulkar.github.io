@@ -4,63 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Atharva Hirulkar</title>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <style>
-body{margin:0;font-family:Inter;background:white;color:black}
-nav{position:fixed;top:0;width:100%;padding:20px 60px;backdrop-filter:blur(12px);background:rgba(255,255,255,.7);display:flex;justify-content:space-between}
+body{margin:0;font-family:Inter;background:white;color:black;transition:.4s}
+nav{position:fixed;top:0;width:100%;padding:20px 60px;backdrop-filter:blur(12px);
+background:rgba(255,255,255,.7);display:flex;justify-content:space-between;align-items:center;z-index:99}
+nav a{margin-left:24px;text-decoration:none;color:black;font-weight:500}
 section{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:120px}
-.card{background:rgba(255,255,255,.6);backdrop-filter:blur(20px);padding:30px;border-radius:30px;box-shadow:0 20px 40px rgba(0,0,0,.1);transition:.4s}
+.card{background:rgba(255,255,255,.6);backdrop-filter:blur(20px);padding:30px;border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);transition:.4s}
 .card:hover{transform:scale(1.06)}
+.chat{position:fixed;bottom:30px;right:30px;background:#007aff;color:white;width:60px;height:60px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.dark{background:#0b0b0b;color:white}
+.dark nav{background:rgba(20,20,20,.8)}
+.dark nav a{color:white}
+.dark .card{background:rgba(30,30,30,.7)}
 </style>
 </head>
+
 <body>
 
 <nav>
-  <button onclick="toggleDark()">☾</button>
+  <b>Atharva</b>
   <div>
     <a href="index.html">Home</a>
     <a href="academics.html">Academics</a>
     <a href="experience.html">Experience</a>
     <a href="projects.html">Projects</a>
+    <button onclick="toggleDark()" style="margin-left:20px">☾</button>
   </div>
-</nav> 
-
+</nav>
 
 <section>
-  <div>
+  <div data-aos="fade-up">
     <h1 style="font-size:72px;margin-bottom:20px;">Atharva Hirulkar</h1>
-    <p style="color:gray">Data Science • Statistics • Machine Learning </p>
+    <p style="color:gray">Data Science • Machine Learning • Cloud Systems</p>
+    <p style="color:gray">UC San Diego MS • Ex-State Street</p>
   </div>
 </section>
 
-<section id="projects" class="cards">
-  <div class="card">ECG-PPG Alert System</div>
-  <div class="card">Clinical ML Research</div>
-  <div class="card">Graduate @ UCSD</div>
+<section class="cards">
+  <div class="card" data-aos="fade-up">Pulmonary Abnormality Detection (Patent)</div>
+  <div class="card" data-aos="fade-up">Multi-Cloud Data Engineering</div>
+  <div class="card" data-aos="fade-up">Clinical NLP & Time-Series ML</div>
 </section>
 
-<!-- <section id="contact">
-  <h2>ahirulkar@ucsd.edu</h2>
-</section> -->
-<script>AOS.init({duration:1000,once:true});</script>
-<script>
-function toggleDark(){
-  document.body.classList.toggle("dark")
-}
-</script>
-<style>
-.dark{background:#0b0b0b;color:white}
-.dark .card{background:rgba(30,30,30,.7)}
-</style>
+<a href="mailto:atharvahirulkar.010@gmail.com" class="chat">💬</a>
 
-<a href="mailto:atharvah@email.com" class="chat">💬</a>
-<style>
-.chat{position:fixed;bottom:30px;right:30px;background:#007aff;color:white;
-width:60px;height:60px;border-radius:50%;display:flex;align-items:center;
-justify-content:center;font-size:26px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
-</style>
-  
+<script>
+AOS.init({duration:1000,once:true});
+function toggleDark(){document.body.classList.toggle("dark")}
+</script>
+
 </body>
 </html>
