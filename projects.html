@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects – Atharva Hirulkar</title>
+<title>Projects - Atharva Hirulkar</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -12,26 +12,34 @@
 <style>
 *{box-sizing:border-box}
 html,body{overflow-x:hidden}
-body{margin:0;font-family:Inter;background:white;color:black;padding-top:120px;transition:.4s}
+img,video,iframe{max-width:100%}  
+body{margin:0;font-family:Inter;background:white;color:black;padding-top:120px;overflow-x:hidden;transition:.4s}
 
 nav{
-  position:fixed;top:0;width:100%;padding:20px 6vw;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  padding:18px 5vw;
   backdrop-filter:blur(12px);
   background:rgba(255,255,255,.7);
-  display:flex;justify-content:space-between;align-items:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   z-index:99;
 }
+
 nav a{margin-left:24px;text-decoration:none;color:black;font-weight:500}
 
 h1{font-size:clamp(42px,7vw,64px);text-align:center;margin:40px 0}
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:32px;
-  padding:0 6vw 80px;
-  max-width:1200px;
-  margin:auto;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+  gap:28px;
+  padding:0 5vw 80px;
+  max-width:1100px;
+  margin-inline:auto;
 }
 
 .card{
