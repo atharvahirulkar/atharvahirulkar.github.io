@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atharva H.</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+<style>
+body{margin:0;font-family:Inter;background:white;color:black}
+nav{position:fixed;top:0;width:100%;padding:20px 60px;backdrop-filter:blur(12px);background:rgba(255,255,255,.7);display:flex;justify-content:space-between}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:120px}
+.card{background:rgba(255,255,255,.6);backdrop-filter:blur(20px);padding:30px;border-radius:30px;box-shadow:0 20px 40px rgba(0,0,0,.1);transition:.4s}
+.card:hover{transform:scale(1.06)}
+</style>
+</head>
+<body>
+
+<nav>
+  <b>Atharva</b>
+  <div>
+    <a href="#">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section>
+  <div>
+    <h1 style="font-size:72px;margin-bottom:20px;">Atharva H.</h1>
+    <p style="color:gray">Medical AI • Machine Learning • UCSD Grad</p>
+  </div>
+</section>
+
+<section id="projects" class="cards">
+  <div class="card">ECG-PPG Alert System</div>
+  <div class="card">Clinical ML Research</div>
+  <div class="card">Graduate @ UCSD</div>
+</section>
+
+<section id="contact">
+  <h2>atharvah@email.com</h2>
+</section>
+
+</body>
+</html>
