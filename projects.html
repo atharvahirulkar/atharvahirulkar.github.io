@@ -6,13 +6,14 @@
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <style>
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+h1{font-size:clamp(40px,8vw,72px)}  
 body{margin:0;font-family:Inter;background:white;color:black;padding-top:120px}
-nav{position:fixed;top:0;width:100%;padding:20px 60px;backdrop-filter:blur(12px);
-background:rgba(255,255,255,.7);display:flex;justify-content:space-between}
+nav{position:fixed;top:0;width:100%;padding:20px 6vw;backdrop-filter:blur(12px);background:rgba(255,255,255,.7);display:flex;justify-content:space-between;align-items:center;z-index:99;box-sizing:border-box;}
 nav a{margin-left:24px;text-decoration:none;color:black}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:1100px;margin:auto}
-.card{background:rgba(255,255,255,.7);backdrop-filter:blur(20px);padding:40px;border-radius:30px;
-box-shadow:0 20px 40px rgba(0,0,0,.1)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:120px 8vw 120px 8vw;max-width:1400px;margin:auto;box-sizing:border-box;}
 .dark{background:#0b0b0b;color:white}
 .dark nav{background:rgba(20,20,20,.8)}
 .dark nav a{color:white}
