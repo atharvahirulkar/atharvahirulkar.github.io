@@ -1,53 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects – Atharva Hirulkar</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <style>
 *{box-sizing:border-box}
 html,body{overflow-x:hidden}
-h1{font-size:clamp(40px,8vw,72px)}  
-body{margin:0;font-family:Inter;background:white;color:black;padding-top:120px}
-nav{position:fixed;top:0;width:100%;padding:20px 6vw;backdrop-filter:blur(12px);background:rgba(255,255,255,.7);display:flex;justify-content:space-between;align-items:center;z-index:99;box-sizing:border-box;}
-nav a{margin-left:24px;text-decoration:none;color:black}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:1100px;margin:auto}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:120px 8vw 120px 8vw;max-width:1400px;margin:auto;box-sizing:border-box;}
+body{margin:0;font-family:Inter;background:white;color:black;padding-top:120px;transition:.4s}
+
+nav{
+  position:fixed;top:0;width:100%;padding:20px 6vw;
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.7);
+  display:flex;justify-content:space-between;align-items:center;
+  z-index:99;
+}
+nav a{margin-left:24px;text-decoration:none;color:black;font-weight:500}
+
+h1{font-size:clamp(42px,7vw,64px);text-align:center;margin:40px 0}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:32px;
+  padding:0 6vw 80px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.card{
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(20px);
+  padding:36px;
+  border-radius:30px;
+  box-shadow:0 20px 40px rgba(0,0,0,.1);
+  transition:.4s;
+}
+.card:hover{transform:translateY(-6px) scale(1.02)}
+
 .dark{background:#0b0b0b;color:white}
-.dark nav{background:rgba(20,20,20,.8)}
+.dark nav{background:rgba(20,20,20,.85)}
 .dark nav a{color:white}
 .dark .card{background:rgba(30,30,30,.7)}
 </style>
 </head>
+
 <body>
 
 <nav>
 <b>Atharva</b>
 <div>
-<a href="index.html">Home</a>
-<a href="academics.html">Academics</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
-<button onclick="toggleDark()">☾</button>
+  <a href="index.html">Home</a>
+  <a href="academics.html">Academics</a>
+  <a href="experience.html">Experience</a>
+  <a href="projects.html">Projects</a>
+  <button onclick="toggleDark()" style="margin-left:16px">☾</button>
 </div>
 </nav>
 
-<div class="grid">
-<div class="card" data-aos="fade-up">
-<b>Pulmonary Abnormality Detection (Patent)</b><br>ECG-PPG signal modeling & alert system
-</div>
-<div class="card" data-aos="fade-up">
-<b>Speech & Video to Text AI</b><br>HMM multilingual transcription & summarization
-</div>
-<div class="card" data-aos="fade-up">
-<b>Twitter Sentiment AI</b><br>Bi-LSTM & Transformer real-time classification
-</div>
-</div>
+<h1 data-aos="fade-up">Projects</h1>
 
-<script>
-AOS.init({duration:1000,once:true});
-function toggleDark(){document.body.classList.toggle("dark")}
-</script>
-</body>
-</html>
+<div class="grid">
+  <div class="card" data
