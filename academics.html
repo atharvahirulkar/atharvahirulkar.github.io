@@ -3,16 +3,49 @@
 <head>
 <title>Academics</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <style>
-body{font-family:Inter;background:white;padding:100px}
-.card{backdrop-filter:blur(20px);background:rgba(255,255,255,.7);padding:30px;border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,.1);margin-bottom:40px}
+body{margin:0;font-family:Inter;background:white;color:black;transition:.4s;padding-top:120px}
+nav{position:fixed;top:0;width:100%;padding:20px 60px;backdrop-filter:blur(12px);background:rgba(255,255,255,.7);
+display:flex;justify-content:space-between;align-items:center}
+nav a{margin-left:24px;text-decoration:none;color:black}
+.card{max-width:900px;margin:40px auto;background:rgba(255,255,255,.7);backdrop-filter:blur(20px);
+padding:40px;border-radius:30px;box-shadow:0 20px 40px rgba(0,0,0,.1)}
+.dark{background:#0b0b0b;color:white}
+.dark nav{background:rgba(20,20,20,.8)}
+.dark nav a{color:white}
+.dark .card{background:rgba(30,30,30,.7)}
 </style>
 </head>
 <body>
-<h1>Academics</h1>
-<div class="card">
-<b>MS – UC San Diego</b><br>
-Specialization: Machine Learning & Medical AI
+
+<nav>
+<b>Atharva</b>
+<div>
+<a href="index.html">Home</a>
+<a href="academics.html">Academics</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html">Projects</a>
+<button onclick="toggleDark()">☾</button>
 </div>
+</nav>
+
+<div class="card" data-aos="fade-up">
+<h1>University of California, San Diego</h1>
+<p>M.S. Data Science (2025–2027) • GPA 3.76/4.0</p>
+<p>Statistical NLP • Scalable Systems • Optimization • Advanced Data Mining</p>
+</div>
+
+<div class="card" data-aos="fade-up">
+<h1>Vishwakarma Institute of IT, Pune</h1>
+<p>B.Tech Computer Engineering (2019–2023) • GPA 3.91/4.0</p>
+<p>ML • AI • DBMS • Algorithms • Data Visualization</p>
+</div>
+
+<script>
+AOS.init({duration:1000,once:true});
+function toggleDark(){document.body.classList.toggle("dark")}
+</script>
 </body>
 </html>
