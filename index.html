@@ -51,7 +51,7 @@ body.lh #cur-ring{width:60px;height:60px;border-color:var(--accent);}
 #music-btn:hover ~ .music-label{opacity:1;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px 56px;mix-blend-mode:multiply;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px 56px;mix-blend-mode:multiply;transition: transform .35s ease, opacity .35s ease;} /* Addition */
 .nav-logo{font-family:"Playfair Display",serif;font-weight:700;font-size:1.1rem;color:var(--black);text-decoration:none;letter-spacing:-0.01em;}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center;}
 .nav-links a{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;font-weight:500;transition:color .2s;position:relative;}
@@ -511,5 +511,25 @@ btn.addEventListener("click",()=>{
   playing=!playing;
 });
 </script>
+  
+<script>
+let lastScroll = 0;
+const navbar = document.querySelector("nav");
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if(currentScroll > lastScroll && currentScroll > 80){
+    navbar.style.transform = "translateY(-100%)";
+    navbar.style.opacity = "0";
+  } else {
+    navbar.style.transform = "translateY(0)";
+    navbar.style.opacity = "1";
+  }
+
+  lastScroll = currentScroll;
+
+});
+</script>
+  
 </body>
 </html>
