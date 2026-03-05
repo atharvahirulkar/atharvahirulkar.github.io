@@ -27,7 +27,7 @@ body{background:var(--cream);color:var(--black);font-family:"DM Sans",sans-serif
 body.lh #cur{background:var(--accent);}
 body.lh #cur-ring{width:60px;height:60px;border-color:var(--accent);}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px 56px;mix-blend-mode:multiply;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px 56px;mix-blend-mode:multiply;transition: transform .35s ease, opacity .35s ease;}
 .nav-logo{font-family:"Playfair Display",serif;font-weight:700;font-size:1.1rem;color:var(--black);text-decoration:none;}
 .nav-back{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;font-weight:500;display:flex;align-items:center;gap:8px;transition:gap .2s;}
 .nav-back:hover{gap:12px;}
@@ -237,5 +237,27 @@ document.querySelectorAll("a,.trait-card").forEach(el=>{
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("vis");});},{threshold:.1,rootMargin:"0px 0px -40px 0px"});
 document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
 </script>
+  
+<script>
+let lastScroll = 0;
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+
+  const currentScroll = window.pageYOffset;
+
+  if(currentScroll > lastScroll && currentScroll > 80){
+    navbar.style.transform = "translateY(-100%)";
+    navbar.style.opacity = "0";
+  } else {
+    navbar.style.transform = "translateY(0)";
+    navbar.style.opacity = "1";
+  }
+
+  lastScroll = currentScroll;
+
+});
+</script>
+  
 </body>
 </html>
