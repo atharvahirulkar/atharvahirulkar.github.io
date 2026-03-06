@@ -23,8 +23,8 @@ html{scroll-behavior:smooth;overflow-x:hidden;}
 body{background:var(--cream);color:var(--black);font-family:"DM Sans",sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
 
 /* CURSOR POS */
-#cur{position:fixed;width:10px;height:10px;background:var(--black);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s;mix-blend-mode:multiply;}
-#cur-ring{position:fixed;width:40px;height:40px;border:1.5px solid var(--black);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s ease,top .1s ease,width .2s,height .2s,border-color .2s;mix-blend-mode:multiply;}
+#cur{position:fixed;width:10px;height:10px;background:var(--black);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s;mix-blend-mode:difference;}
+#cur-ring{position:fixed;width:40px;height:40px;border:1.5px solid var(--black);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s ease,top .1s ease,width .2s,height .2s,border-color .2s;mix-blend-mode:difference;}
 body.lh #cur{width:8px;height:8px;background:var(--accent);}
 body.lh #cur-ring{width:60px;height:60px;border-color:var(--accent);}
 
@@ -70,7 +70,7 @@ nav.hide-nav{transform: translateY(-110%);opacity:0;}
 .hero-eyebrow{font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;display:flex;align-items:center;gap:12px;opacity:0;animation:fadeUp .7s .8s forwards;}
 .hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--muted);}
 h1.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.8rem,8.5vw,8.5rem);font-weight:900;line-height:1.05;letter-spacing:-0.04em;}
-.hero-h1 .ln{display:block;overflow:hidden;}
+.hero-h1 .ln{display:block;overflow:visible;padding-bottom:.08em;}
 .hero-h1 .ln span{display:block;opacity:0;transform:translateY(105%);animation:lineUp .9s cubic-bezier(0.16,1,0.3,1) forwards;}
 .hero-h1 .ln:nth-child(1) span{animation-delay:.5s;}
 .hero-h1 .ln:nth-child(2) span{animation-delay:.65s;}
