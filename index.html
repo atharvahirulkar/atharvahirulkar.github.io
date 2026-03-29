@@ -34,21 +34,7 @@ body.lh #cur-ring{width:60px;height:60px;}
 .l-pct{font-family:"Playfair Display",serif;font-size:clamp(5rem,12vw,10rem);color:var(--cream);font-weight:900;line-height:1;letter-spacing:-0.04em;}
 .l-lbl{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,235,227,.35);margin-top:12px;text-align:center;}
 
-/* MUSIC TOGGLE */
-#music-btn{position:fixed;bottom:32px;right:32px;z-index:600;width:48px;height:48px;border-radius:50%;background:var(--black);border:none;cursor:none;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;}
-#music-btn:hover{background:var(--black2);transform:scale(1.1);}
-#music-btn svg{transition:opacity .2s;}
-.music-bars{display:flex;align-items:flex-end;gap:2px;height:16px;}
-.music-bars span{width:3px;background:var(--cream);border-radius:2px;animation:bar 0.8s ease-in-out infinite;}
-.music-bars span:nth-child(1){height:6px;animation-delay:0s;}
-.music-bars span:nth-child(2){height:14px;animation-delay:.15s;}
-.music-bars span:nth-child(3){height:10px;animation-delay:.3s;}
-.music-bars span:nth-child(4){height:16px;animation-delay:.1s;}
-.music-bars span:nth-child(5){height:8px;animation-delay:.25s;}
-@keyframes bar{0%,100%{transform:scaleY(0.4)}50%{transform:scaleY(1)}}
-#music-btn.paused .music-bars span{animation-play-state:paused;opacity:.4;}
-.music-label{position:fixed;bottom:40px;right:90px;z-index:600;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap;}
-#music-btn:hover ~ .music-label{opacity:1;}
+
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px 56px;mix-blend-mode:multiply;backdrop-filter: blur(20px);background: rgba(240,235,227,0.65);transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .35s ease,background .35s ease,padding .35s ease;}
@@ -83,13 +69,6 @@ h1.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.8rem,8.5vw,8.5
 .btn-main{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:var(--black);color:var(--cream);text-decoration:none;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s,transform .2s;}
 .btn-main:hover{background:var(--black2);transform:translateY(-2px);}
 .hero-hint{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
-
-/* MARQUEE */
-.mq-wrap{overflow:hidden;padding:18px 0;background:var(--black);}
-.mq-track{display:flex;white-space:nowrap;animation:mq 22s linear infinite;}
-.mq-item{font-family:"Playfair Display",serif;font-weight:900;font-size:1.3rem;letter-spacing:-0.02em;color:var(--cream);padding:0 44px;opacity:.28;}
-.mq-item.hi{color:var(--accent);opacity:1;}
-@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* SECTIONS */
 section{padding:120px 56px;border-bottom:1px solid var(--border);}
@@ -264,14 +243,6 @@ img{max-width:100%;height:auto;display:block;}
 
   /* footer */
   footer{padding:20px;flex-direction:column;gap:8px;}
-
-  /* music btn */
-  #music-btn{bottom:20px;right:20px;width:40px;height:40px;}
-  .music-label{display:none;}
-
-  /* marquee — slow down slightly on mobile */
-  .mq-track{animation-duration:30s;}
-  .mq-item{font-size:1rem;padding:0 28px;}
 }
 
 @media(max-width:480px){
@@ -293,12 +264,7 @@ img{max-width:100%;height:auto;display:block;}
 <div id="cur-ring"></div>
 
 <!-- MUSIC -->
-<button id="music-btn" class="paused" title="Toggle music">
-  <div class="music-bars">
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-</button>
-<span class="music-label">Ambient music</span>
+
 
 <nav class="navbar">
   <a href="#hero" class="nav-logo">atharva@world</a>
@@ -329,16 +295,7 @@ img{max-width:100%;height:auto;display:block;}
   </div>
 </section>
 
-<div class="mq-wrap">
-  <div class="mq-track">
-    <span class="mq-item hi" style="animation:pulse .6s ease-in-out infinite;">"Sometimes the very people no one imagines anything of, do the things that no one can imagine."</span>
-    <span class="mq-item" style="visibility:hidden;">·</span>
-    <span class="mq-item hi" style="animation:pulse .6s ease-in-out infinite;">"Sometimes the very people no one imagines anything of, do the things that no one can imagine."</span>
-  </div>
-</div>
-<style>
-@keyframes pulse{0%,100%{opacity:0.6}50%{opacity:1}}
-</style>
+
 
 <section id="about">
   <div class="s-lbl reveal">About me</div>
@@ -354,7 +311,7 @@ img{max-width:100%;height:auto;display:block;}
     <div>
       <p class="ab-para reveal">I'm a <strong>Data Engineer & ML Engineer</strong> with hands-on experience building pipelines and systems at serious scale. At <strong>State Street Corporation</strong>, I processed ~5M records/day on Snowflake, monitored $5B in real-time transaction flows, and engineered ISO 20022-compliant payment workflows.</p>
       <p class="ab-para reveal d1">I've architected <strong>multi-cloud infrastructure</strong> across AWS, Azure, and OCI using Terraform — and automated operations with Ansible, cutting provisioning time by ~50%. I care about reliability, not just velocity.</p>
-      <p class="ab-para reveal d2">Currently pursuing an <strong>MS in Data Science at UC San Diego</strong> (GPA 3.76), deepening expertise in scalable data systems, statistical NLP, and optimization. I hold a <strong>granted patent</strong> for an ML-driven physiological anomaly detection framework.</p>
+      <p class="ab-para reveal d2">Currently pursuing an <strong>MS in Data Science at UC San Diego</strong> (GPA 3.80), deepening expertise in scalable data systems, statistical NLP, and optimization. I hold a <strong>granted patent</strong> for an ML-driven physiological anomaly detection framework.</p>
       <div class="sk-section reveal d3">
         <div class="sk-grp">
           <div class="sk-cat">Data Systems</div>
@@ -505,7 +462,7 @@ img{max-width:100%;height:auto;display:block;}
   <div class="s-lbl lt reveal">Contact</div>
   <h2 class="ct-big reveal">Got an<br>interesting<br><em>problem?</em></h2>
   <div class="ct-row reveal">
-    <div><div class="ct-lbl">Email</div><a href="mailto:ahirulkar@ucsd.edu" class="ct-val">ahirulkar@ucsd.edu</a></div>
+    <div><div class="ct-lbl">Email</div><a href="mailto:atharvahirulkar.010@gmail.com" class="ct-val">atharvahirulkar.010@gmail.com</a></div>
     <div><div class="ct-lbl">Location</div><span class="ct-val nd">San Diego, CA</span></div>
     <div class="ct-links">
       <a href="https://github.com/atharvahirulkar" class="ct-link" target="_blank">GitHub</a>
@@ -539,57 +496,7 @@ document.querySelectorAll("a,button,.proj-item,.sk-pill").forEach(el=>{
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("vis");});},{threshold:.1,rootMargin:"0px 0px -40px 0px"});
 document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
 
-// AMBIENT MUSIC — generated via Web Audio API (no external file needed)
-const btn=document.getElementById("music-btn");
-let ctx,playing=false,nodes=[];
-
-function buildAmbience(){
-  ctx=new(window.AudioContext||window.webkitAudioContext)();
-  const master=ctx.createGain();master.gain.value=0.12;master.connect(ctx.destination);
-
-  // Soft drone — two detuned oscillators
-  function drone(freq,detune,vol){
-    const o=ctx.createOscillator();
-    const g=ctx.createGain();
-    const f=ctx.createBiquadFilter();
-    f.type="lowpass";f.frequency.value=600;
-    o.type="sine";o.frequency.value=freq;o.detune.value=detune;
-    g.gain.value=vol;
-    o.connect(f);f.connect(g);g.connect(master);
-    o.start();nodes.push(o,g,f);
-  }
-  drone(55,0,0.6);   // A1
-  drone(55,8,0.4);   // slight detune
-  drone(110,0,0.3);  // A2 octave
-  drone(165,-4,0.15); // E3 fifth
-  drone(220,5,0.08); // A3
-
-  // Slow LFO tremolo
-  const lfo=ctx.createOscillator();
-  const lfoGain=ctx.createGain();
-  lfo.frequency.value=0.07;lfoGain.gain.value=0.04;
-  lfo.connect(lfoGain);lfoGain.connect(master.gain);
-  lfo.start();nodes.push(lfo,lfoGain);
-
-  // Soft noise pad
-  const bufSize=ctx.sampleRate*4;
-  const buf=ctx.createBuffer(1,bufSize,ctx.sampleRate);
-  const data=buf.getChannelData(0);
-  for(let i=0;i<bufSize;i++)data[i]=(Math.random()*2-1)*0.015;
-  const src=ctx.createBufferSource();src.buffer=buf;src.loop=true;
-  const nf=ctx.createBiquadFilter();nf.type="bandpass";nf.frequency.value=200;nf.Q.value=0.5;
-  src.connect(nf);nf.connect(master);src.start();nodes.push(src,nf);
-}
-
-btn.addEventListener("click",()=>{
-  if(!ctx)buildAmbience();
-  if(playing){
-    ctx.suspend();btn.classList.add("paused");
-  }else{
-    ctx.resume();btn.classList.remove("paused");
-  }
-  playing=!playing;
-});
+// Music removed
 </script>
   
 <script>
@@ -625,6 +532,13 @@ window.addEventListener("scroll", () => {
     const sectionHeight = section.clientHeight;
 
     if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
-      current = sect}
-  }
-                   }
+      current = section.getAttribute("id");
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if(link.getAttribute("href").slice(1) === current){
+      link.classList.add("active");
+    }
+  });
+});
