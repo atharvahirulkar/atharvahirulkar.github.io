@@ -23,10 +23,10 @@ html{scroll-behavior:smooth;overflow-x:hidden;}
 body{background:var(--cream);color:var(--black);font-family:"DM Sans",sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
 
 /* CURSOR POS */
-#cur{position:fixed;width:10px;height:10px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s;mix-blend-mode:difference;}
-#cur-ring{position:fixed;width:40px;height:40px;border:1.5px solid var(--ink);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s ease,top .1s ease,width .2s,height .2s,border-color .2s;mix-blend-mode:difference;}
-body.lh #cur{width:8px;height:8px;background:var(--accent);}
-body.lh #cur-ring{width:60px;height:60px;border-color:var(--accent);}
+#cur{position:fixed;width:10px;height:10px;background:#a8d8d8;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s;mix-blend-mode:normal;}
+#cur-ring{position:fixed;width:40px;height:40px;border:1.5px solid #a8d8d8;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s ease,top .1s ease,width .2s,height .2s;mix-blend-mode:normal;}
+body.lh #cur{width:12px;height:12px;}
+body.lh #cur-ring{width:60px;height:60px;}
 
 /* LOADER */
 #loader{position:fixed;inset:0;z-index:9999;background:var(--black);display:flex;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s;}
@@ -331,16 +331,16 @@ img{max-width:100%;height:auto;display:block;}
 
 <div class="mq-wrap">
   <div class="mq-track">
-    <span class="mq-item">Snowflake</span><span class="mq-item hi">ETL · 5M records/day</span>
-    <span class="mq-item">PyTorch</span><span class="mq-item hi">ISO 20022 Payments</span>
-    <span class="mq-item">Terraform</span><span class="mq-item hi">AWS · Azure · OCI</span>
-    <span class="mq-item">Kafka</span><span class="mq-item hi">$5B Transaction Monitoring</span>
-    <span class="mq-item">Hugging Face</span><span class="mq-item hi">Granted Patent</span>
-    <span class="mq-item">Snowflake</span><span class="mq-item hi">ETL · 5M records/day</span>
-    <span class="mq-item">PyTorch</span><span class="mq-item hi">ISO 20022 Payments</span>
-    <span class="mq-item">Terraform</span><span class="mq-item hi">AWS · Azure · OCI</span>
-    <span class="mq-item">Kafka</span><span class="mq-item hi">$5B Transaction Monitoring</span>
-    <span class="mq-item">Hugging Face</span><span class="mq-item hi">Granted Patent</span>
+    <span class="mq-item hi">MarketPulse</span><span class="mq-item">·</span>
+    <span class="mq-item hi">FraudAPI</span><span class="mq-item">·</span>
+    <span class="mq-item hi">CosmeTik</span><span class="mq-item">·</span>
+    <span class="mq-item hi">PulseML</span><span class="mq-item">·</span>
+    <span class="mq-item hi">Multilingual</span><span class="mq-item">·</span>
+    <span class="mq-item hi">MarketPulse</span><span class="mq-item">·</span>
+    <span class="mq-item hi">FraudAPI</span><span class="mq-item">·</span>
+    <span class="mq-item hi">CosmeTik</span><span class="mq-item">·</span>
+    <span class="mq-item hi">PulseML</span><span class="mq-item">·</span>
+    <span class="mq-item hi">Multilingual</span>
   </div>
 </div>
 
@@ -429,29 +429,47 @@ img{max-width:100%;height:auto;display:block;}
     <div class="proj-item reveal">
       <div class="proj-num">01</div>
       <div>
-        <div class="proj-name">Pulmonary Anomaly Detection <span class="pat">Patent L-114951/2022</span></div>
-        <div class="proj-desc">ML-driven ECG–PPG anomaly detection framework leveraging statistical signal processing and feature engineering to enable early physiological risk alerts. Noise reduction and biomarker extraction via Python (SciPy, Pandas).</div>
-        <div class="pst"><span>Python</span><span>SciPy</span><span>Pandas</span><span>Signal Processing</span><span>Feature Engineering</span></div>
+        <div class="proj-name">MarketPulse <span class="pat">🚀 Coming soon</span></div>
+        <div class="proj-desc">Real-time market data pipeline. Polygon.io WebSocket → Kafka → PySpark → TimescaleDB → Grafana dashboard with <100ms latency. Live market analytics at scale.</div>
+        <div class="pst"><span>Kafka</span><span>PySpark</span><span>TimescaleDB</span><span>Grafana</span><span>Polygon.io</span><span>Python</span></div>
       </div>
-      <div class="proj-arr">↗</div>
+      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/marketpulse" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
     <div class="proj-item reveal">
       <div class="proj-num">02</div>
       <div>
-        <div class="proj-name">Multilingual Speech & Video Transcription</div>
-        <div class="proj-desc">Multilingual speech recognition pipeline using HMMs, MFCC feature extraction and sequence modeling — ~92% transcription accuracy across a 3GB dataset. Signal-processing workflows via PyTorch and Hugging Face.</div>
-        <div class="pst"><span>PyTorch</span><span>Hugging Face</span><span>HMMs</span><span>MFCC</span><span>NLP</span></div>
+        <div class="proj-name">FraudAPI <span class="pat">🚀 Coming soon</span></div>
+        <div class="proj-desc">ML-powered fraud detection microservice. XGBoost + LightGBM ensemble models with AUC-PR >0.88. FastAPI backend deployed on GCP Cloud Run.</div>
+        <div class="pst"><span>XGBoost</span><span>LightGBM</span><span>FastAPI</span><span>GCP</span><span>Python</span><span>ML</span></div>
       </div>
-      <div class="proj-arr">↗</div>
+      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/fraud-detection" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
     <div class="proj-item reveal">
       <div class="proj-num">03</div>
       <div>
-        <div class="proj-name">Sentiment Analysis on X (Twitter)</div>
-        <div class="proj-desc">Large-scale text pipelines from Twitter API data, BiLSTM + Transformer models on 120k+ posts — 89% F1-score for sentiment classification. End-to-end from data ingestion to model evaluation.</div>
-        <div class="pst"><span>BiLSTM</span><span>Transformers</span><span>NLP</span><span>Python</span><span>REST API</span></div>
+        <div class="proj-name">CosmeTik</div>
+        <div class="proj-desc">Multi-database skincare analytics platform. Unified product + review pipeline across PostgreSQL, Neo4j (entity graphs), and Qdrant (vector search). 1M+ reviews, hybrid ML recommender.</div>
+        <div class="pst"><span>PostgreSQL</span><span>Neo4j</span><span>Qdrant</span><span>Python</span><span>NLP</span><span>Recommendation Engine</span></div>
       </div>
-      <div class="proj-arr">↗</div>
+      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/cosmetik" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
+    </div>
+    <div class="proj-item reveal">
+      <div class="proj-num">04</div>
+      <div>
+        <div class="proj-name">PulseML <span class="pat">Patent L-114951/2022</span></div>
+        <div class="proj-desc">Wearable ECG/PPG physiological monitoring. LSTM-based arrhythmia detection with custom IoT data pipeline. Core ML framework for real-time anomaly alerts on biosignals.</div>
+        <div class="pst"><span>LSTM</span><span>PyTorch</span><span>Signal Processing</span><span>IoT</span><span>Python</span><span>Feature Engineering</span></div>
+      </div>
+      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/pulseml" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
+    </div>
+    <div class="proj-item reveal">
+      <div class="proj-num">05</div>
+      <div>
+        <div class="proj-name">Multilingual Speech Transcription</div>
+        <div class="proj-desc">Video-to-text pipeline supporting 100+ languages. BART-Large-CNN abstractive summarization with multilingual encoder. Flask API serving transcription + translation.</div>
+        <div class="pst"><span>BART</span><span>Hugging Face</span><span>NLP</span><span>Flask</span><span>Python</span><span>Transformers</span></div>
+      </div>
+      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/multilingual-speech-transcription" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
   </div>
 </section>
@@ -491,7 +509,7 @@ img{max-width:100%;height:auto;display:block;}
   <div class="s-lbl lt reveal">Contact</div>
   <h2 class="ct-big reveal">Got an<br>interesting<br><em>problem?</em></h2>
   <div class="ct-row reveal">
-    <div><div class="ct-lbl">Email</div><a href="/cdn-cgi/l/email-protection#bddcd5d4cfc8d1d6dccffdc8deced993d8d9c8" class="ct-val"><span class="__cf_email__" data-cfemail="6a0b0203181f06010b182a1f09190e440f0e1f">[email&#160;protected]</span></a></div>
+    <div><div class="ct-lbl">Email</div><a href="mailto:ahirulkar@ucsd.edu" class="ct-val">ahirulkar@ucsd.edu</a></div>
     <div><div class="ct-lbl">Location</div><span class="ct-val nd">San Diego, CA</span></div>
     <div class="ct-links">
       <a href="https://github.com/atharvahirulkar" class="ct-link" target="_blank">GitHub</a>
