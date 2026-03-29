@@ -41,6 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 .ph-content{display:flex;flex-direction:column;justify-content:flex-end;padding:80px 56px 80px 48px;}
 .ph-eyebrow{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
 .ph-eyebrow::before{content:"";width:24px;height:1px;background:var(--muted);}
+.ph-eyebrow::after{content:"";width:24px;height:1px;background:var(--muted);}
 .ph-title{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(3rem,6vw,5.5rem);line-height:.95;letter-spacing:-0.04em;margin-bottom:32px;}
 .ph-title em{font-style:italic;color:var(--muted);}
 .ph-tagline{font-size:1.05rem;line-height:1.8;color:var(--muted);max-width:380px;}
@@ -50,6 +51,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 #traits{padding:120px 56px;background:var(--black);border-bottom:1px solid rgba(255,255,255,.08);}
 .tr-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,235,227,.3);margin-bottom:72px;display:flex;align-items:center;gap:12px;}
 .tr-label::before{content:"";width:24px;height:1px;background:rgba(240,235,227,.3);}
+.tr-label::after{content:"";width:24px;height:1px;background:rgba(240,235,227,.3);}
 .traits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07);}
 .trait-card{background:var(--black2);padding:40px 32px;transition:background .25s;}
 .trait-card:hover{background:#1f1e1c;}
@@ -64,7 +66,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 
 /* CURRENTLY section */
 #currently{padding:120px 56px;background:var(--cream2);border-bottom:1px solid var(--border);}
-.curr-title{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;letter-spacing:-0.04em;margin-bottom:64px;}
+.curr-title{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;letter-spacing:-0.04em;margin-bottom:64px;display:flex;align-items:center;gap:12px;}
+.curr-title::before{content:"";width:24px;height:1px;background:var(--muted);}
+.curr-title::after{content:"";width:24px;height:1px;background:var(--muted);}
 .curr-title em{font-style:italic;font-weight:400;color:var(--muted);}
 .curr-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;}
 .curr-col{}
@@ -252,7 +256,7 @@ img{max-width:100%;height:auto;display:block;}
 
 <!-- BACK -->
 <div class="back-section reveal">
-  <div class="back-big">Enough<br>about <em>me</em>—<br>let's work.</div>
+  <div class="back-big">Enough<br>about <em>me</em>-<br>let's work.</div>
   <a href="index.html#contact" class="back-btn">Get in touch ↗</a>
 </div>
 
