@@ -55,6 +55,7 @@ nav.hide-nav{transform: translateY(-110%);opacity:0;}
 #hero{min-height:100vh;padding:160px 56px 80px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
 .hero-eyebrow{font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;display:flex;align-items:center;gap:12px;opacity:0;animation:fadeUp .7s .8s forwards;}
 .hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--muted);}
+.hero-eyebrow::after{content:"";width:28px;height:1px;background:var(--muted);}
 h1.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.8rem,8.5vw,8.5rem);font-weight:900;line-height:1.05;letter-spacing:-0.04em;}
 .hero-h1 .ln{display:block;overflow:visible;padding-bottom:.08em;}
 .hero-h1 .ln span{display:block;opacity:0;transform:translateY(105%);animation:lineUp .9s cubic-bezier(0.16,1,0.3,1) forwards;}
@@ -74,8 +75,10 @@ h1.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.8rem,8.5vw,8.5
 section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .s-lbl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:64px;display:flex;align-items:center;gap:12px;font-weight:500;}
 .s-lbl::before{content:"";width:24px;height:1px;background:var(--muted);}
+.s-lbl::after{content:"";width:24px;height:1px;background:var(--muted);}
 .s-lbl.lt{color:rgba(240,235,227,.3);}
 .s-lbl.lt::before{background:rgba(240,235,227,.3);}
+.s-lbl.lt::after{background:rgba(240,235,227,.3);}
 
 /* ABOUT */
 #about{background:var(--cream);}
@@ -98,7 +101,9 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 
 /* EXPERIENCE */
 #experience{background:var(--cream2);}
-.sec-title{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,4rem);line-height:1.05;letter-spacing:-0.04em;margin-bottom:80px;}
+.sec-title{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,4rem);line-height:1.05;letter-spacing:-0.04em;margin-bottom:80px;display:flex;align-items:center;gap:12px;}
+.sec-title::before{content:"";width:24px;height:1px;background:var(--muted);}
+.sec-title::after{content:"";width:24px;height:1px;background:var(--muted);}
 .sec-title em{font-style:italic;font-weight:400;color:var(--muted);}
 .timeline{position:relative;}
 .timeline::before{content:"";position:absolute;left:230px;top:0;bottom:0;width:1px;background:var(--border);}
@@ -140,7 +145,9 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 
 /* CERTS */
 #certs{background:var(--black);}
-.cert-ttl{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,4rem);line-height:1.05;letter-spacing:-0.04em;color:var(--cream);margin-bottom:64px;}
+.cert-ttl{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,4rem);line-height:1.05;letter-spacing:-0.04em;color:var(--cream);margin-bottom:64px;display:flex;align-items:center;gap:12px;}
+.cert-ttl::before{content:"";width:24px;height:1px;background:rgba(240,235,227,.3);}
+.cert-ttl::after{content:"";width:24px;height:1px;background:rgba(240,235,227,.3);}
 .cert-ttl em{font-style:italic;color:var(--accent);}
 .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);}
 .cert-card{background:var(--black2);padding:40px 32px;transition:background .2s;}
@@ -164,7 +171,9 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 
 /* CONTACT */
 #contact{background:var(--black);min-height:55vh;display:flex;flex-direction:column;justify-content:center;}
-.ct-big{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.8rem,7vw,6.5rem);line-height:.95;letter-spacing:-0.04em;color:var(--cream);margin-bottom:64px;}
+.ct-big{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.8rem,7vw,6.5rem);line-height:.95;letter-spacing:-0.04em;color:var(--cream);margin-bottom:64px;display:flex;align-items:center;gap:12px;}
+.ct-big::before{content:"";width:24px;height:1px;background:rgba(240,235,227,.3);}
+.ct-big::after{content:"";width:24px;height:1px;background:rgba(240,235,227,.3);}
 .ct-big em{font-style:italic;color:var(--accent);}
 .ct-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px;}
 .ct-lbl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,235,227,.3);margin-bottom:8px;}
@@ -311,7 +320,7 @@ img{max-width:100%;height:auto;display:block;}
     <div>
       <p class="ab-para reveal">I'm a <strong>Data Engineer & ML Engineer</strong> with hands-on experience building pipelines and systems at serious scale. At <strong>State Street Corporation</strong>, I processed ~5M records/day on Snowflake, monitored $5B in real-time transaction flows, and engineered ISO 20022-compliant payment workflows.</p>
       <p class="ab-para reveal d1">I've architected <strong>multi-cloud infrastructure</strong> across AWS, Azure, and OCI using Terraform — and automated operations with Ansible, cutting provisioning time by ~50%. I care about reliability, not just velocity.</p>
-      <p class="ab-para reveal d2">Currently pursuing an <strong>MS in Data Science at UC San Diego</strong> (GPA 3.80), deepening expertise in scalable data systems, statistical NLP, and optimization. I hold a <strong>granted patent</strong> for an ML-driven physiological anomaly detection framework.</p>
+      <p class="ab-para reveal d2">Currently pursuing an <strong>MS in Data Science at UC San Diego</strong> (GPA 3.80), deepening expertise in scalable data systems, statistical NLP, and optimization. I hold a <strong>granted copyright</strong> in biomedical time-series ML.</p>
       <div class="sk-section reveal d3">
         <div class="sk-grp">
           <div class="sk-cat">Data Systems</div>
@@ -348,10 +357,10 @@ img{max-width:100%;height:auto;display:block;}
       <div>
         <div class="tl-role">Data Engineer</div>
         <ul class="tl-ul">
-          <li>Deployed <strong>SQL + Python ETL pipelines on Snowflake</strong> processing ~5M records/day, improving data availability by 70%.</li>
-          <li>Architected <strong>multi-cloud infrastructure</strong> across AWS, Azure, and OCI using Terraform — improved scalability, reduced manual provisioning overhead.</li>
-          <li>Built <strong>CI/CD Azure DevOps pipelines</strong>, cutting deployment cycles by ~40% and improving release reliability.</li>
-          <li>Automated cloud operations with <strong>Ansible</strong>, reducing infrastructure provisioning time by ~50%.</li>
+          <li>Built and owned <strong>SQL + Python ETL pipelines on Snowflake</strong> processing <strong>5M+ records/day</strong>, ensuring <strong>99.9%+ uptime compliance</strong> with enterprise SLAs across production data workflows.</li>
+          <li>Architected and provisioned <strong>multi-cloud data infrastructure</strong> (OCI, AWS, Azure) using <strong>Terraform IaC</strong>, enabling <strong>scalable, zero-downtime deployments</strong> across production data pipelines.</li>
+          <li>Automated data environment provisioning and configuration using <strong>Ansible playbooks and Shell scripting</strong>, reducing manual operational overhead by <strong>40%</strong> across production data environments.</li>
+          <li>Implemented <strong>Azure DevOps CI/CD</strong> for data services, cutting release cycles by <strong>40% (5 days → 3 days)</strong> and achieving <strong>99.8% deployment success</strong> across cloud data workflows.</li>
         </ul>
         <div class="tl-chips"><span class="tl-chip">Python</span><span class="tl-chip">SQL</span><span class="tl-chip">Snowflake</span><span class="tl-chip">Terraform</span><span class="tl-chip">Ansible</span><span class="tl-chip">Azure DevOps</span><span class="tl-chip">AWS</span></div>
       </div>
@@ -366,8 +375,8 @@ img{max-width:100%;height:auto;display:block;}
       <div>
         <div class="tl-role">Payment Systems Analyst - Intern</div>
         <ul class="tl-ul">
-          <li>Built monitoring analytics on <strong>~$5B real-time transaction flows</strong> across LYNX, CHIPS, TARGET2 to proactively detect pipeline failures.</li>
-          <li>Engineered <strong>ISO 20022-compliant payment workflows</strong> using Shell and PL/SQL, strengthening data validation across high-throughput financial messaging.</li>
+          <li>Built <strong>real-time monitoring dashboards for $5B daily transaction flows</strong> (LYNX, CHIPS, TARGET2), detecting <strong>98% of pipeline failures within 30 seconds</strong> and sustaining <strong>99.9% settlement uptime</strong>.</li>
+          <li>Engineered <strong>ISO 20022 payment data workflows</strong> in Shell and PL/SQL, raising <strong>data-validation accuracy from 96% to 99.4%</strong> on high-volume financial messaging pipelines.</li>
         </ul>
         <div class="tl-chips"><span class="tl-chip">PL/SQL</span><span class="tl-chip">Shell</span><span class="tl-chip">ISO 20022</span><span class="tl-chip">Financial Messaging</span></div>
       </div>
