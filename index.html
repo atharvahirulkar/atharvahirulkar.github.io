@@ -180,6 +180,18 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .ct-link:hover{color:var(--cream);}
 .ct-link:hover::after{width:100%;}
 
+/* WHOAMI BANNER */
+#whoami-banner{background:var(--cream2);padding:80px 56px;border-bottom:1px solid var(--border);}
+.whoami-wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:36px;background:var(--cream);border:1.5px solid var(--accent);border-radius:4px;position:relative;overflow:hidden;}
+.whoami-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,169,110,0.05) 0%,transparent 100%);pointer-events:none;}
+.whoami-content{position:relative;z-index:1;flex:0 1 auto;}
+.whoami-label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:500;}
+.whoami-title{font-family:"Playfair Display",serif;font-weight:700;font-size:1.6rem;line-height:1.2;letter-spacing:-0.025em;margin-bottom:12px;color:var(--black);}
+.whoami-desc{font-size:.88rem;line-height:1.65;color:var(--muted);}
+.whoami-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 24px;background:var(--black);color:var(--cream);text-decoration:none;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s,transform .2s;}
+.whoami-btn:hover{background:var(--accent);color:var(--black);transform:translateY(-2px);}
+.whoami-visual{position:relative;z-index:1;flex-shrink:0;display:flex;align-items:center;}
+
 footer{padding:22px 56px;background:var(--black);display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.07);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(240,235,227,.22);}
 
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
@@ -206,7 +218,7 @@ img{max-width:100%;height:auto;display:block;}
   .hero-bottom{flex-direction:column;align-items:flex-start;gap:24px;margin-top:40px;}
   .hero-desc{max-width:100%;font-size:.95rem;}
   .hero-right{align-items:flex-start;}
-  .btn-main{width:100%;justify-content:center;}
+  .btn-main{width:auto;justify-content:center;}
 
   /* sections */
   section{padding:72px 20px;}
@@ -244,6 +256,12 @@ img{max-width:100%;height:auto;display:block;}
   #contact{min-height:auto;padding:72px 20px;}
   .ct-row{flex-direction:column;align-items:flex-start;gap:28px;}
 
+  /* whoami */
+  #whoami-banner{padding:60px 20px;}
+  .whoami-wrap{flex-direction:column;gap:24px;padding:28px 20px;}
+  .whoami-title{font-size:1.3rem;margin-bottom:10px;}
+  .whoami-visual{display:none;}
+
   /* footer */
   footer{padding:20px;flex-direction:column;gap:8px;}
 }
@@ -276,7 +294,7 @@ img{max-width:100%;height:auto;display:block;}
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="whoami.html" class="nav-personal">whoami ↗</a></li>
+    <li><a href="whoami.html" class="nav-personal">whoami</a></li>
   </ul>
 </nav>
 
@@ -292,8 +310,7 @@ img{max-width:100%;height:auto;display:block;}
       Data Engineer with strong applied ML experience, building large-scale ETL pipelines and real-time financial analytics systems, with <strong>2 years of industry experience</strong> delivering ML-based workflows and high-throughput data infrastructure across <strong>multi-cloud environments</strong>.
     </p>
     <div class="hero-right">
-      <a href="#projects" class="btn-main">View My Work ↗</a>
-      <!-- <span class="hero-hint">↓ Scroll to explore</span> -->
+      <a href="#projects" class="btn-main">View My Work</a>
     </div>
   </div>
 </section>
@@ -457,6 +474,19 @@ img{max-width:100%;height:auto;display:block;}
       <div class="edu-deg">B.Tech. in Computer Engineering · Aug 2019 - Jun 2023</div>
       <div class="edu-gpa">3.91 <span>/ 4.00 GPA</span></div>
       <div class="edu-crs">Applied Mathematics · Linear Algebra · Machine Learning · BI & Data Analytics · Artificial Intelligence · DBMS · Algorithms</div>
+    </div>
+  </div>
+</section>
+
+<section id="whoami-banner">
+  <div class="whoami-wrap">
+    <div class="whoami-content">
+      <div class="whoami-label">More About Me</div>
+      <h2 class="whoami-title">Curious who I really am?</h2>
+      <p class="whoami-desc">Beyond code and data systems,there's more to explore. Check out my personal insights, interests, and the journey behind the engineer.</p>
+    </div>
+    <div class="whoami-visual">
+      <a href="whoami.html" class="whoami-btn">WHOAMI</a>
     </div>
   </div>
 </section>
