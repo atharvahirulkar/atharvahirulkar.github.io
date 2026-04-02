@@ -63,6 +63,7 @@ h1.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.8rem,8.5vw,8.5
 .hero-h1 .ln:nth-child(2) span{animation-delay:.65s;}
 .hero-h1 .ln:nth-child(3) span{animation-delay:.8s;}
 .hero-h1 .it{font-style:italic;color:var(--ink);}
+.hero-h1 .it.muted-text{color:var(--muted);}
 .hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:64px;opacity:0;animation:fadeUp .8s 1.1s forwards;}
 .hero-desc{max-width:480px;font-size:1rem;line-height:1.85;color:var(--muted);}
 .hero-desc strong{color:var(--ink);font-weight:500;}
@@ -180,6 +181,11 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .ct-link:hover{color:var(--cream);}
 .ct-link:hover::after{width:100%;}
 
+/* QUOTE BAND */
+#marquee-banner{background:var(--black);padding:24px 56px;border-bottom:1px solid var(--border);overflow:hidden;}
+.marquee-container{display:flex;align-items:center;justify-content:center;}
+.marquee-text{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.2rem,3vw,2.2rem);color:#c8a96e;letter-spacing:-0.025em;text-align:center;}
+
 /* WHOAMI BANNER */
 #whoami-banner{background:var(--cream2);padding:80px 56px;border-bottom:1px solid var(--border);}
 .whoami-wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:36px;background:var(--cream);border:1.5px solid var(--accent);border-radius:4px;position:relative;overflow:hidden;}
@@ -256,11 +262,12 @@ img{max-width:100%;height:auto;display:block;}
   #contact{min-height:auto;padding:72px 20px;}
   .ct-row{flex-direction:column;align-items:flex-start;gap:28px;}
 
+  /* quote band */
+  #marquee-banner{padding:20px 20px;}
+
   /* whoami */
   #whoami-banner{padding:60px 20px;}
   .whoami-wrap{flex-direction:column;gap:24px;padding:28px 20px;}
-  .whoami-title{font-size:1.3rem;margin-bottom:10px;}
-  .whoami-visual{display:none;}
 
   /* footer */
   footer{padding:20px;flex-direction:column;gap:8px;}
@@ -303,7 +310,7 @@ img{max-width:100%;height:auto;display:block;}
   <h1 class="hero-h1">
     <span class="ln"><span>Building data</span></span>
     <span class="ln"><span>systems that</span></span>
-    <span class="ln"><span class="it">actually scale.</span></span>
+    <span class="ln"><span class="it muted-text">actually scale.</span></span>
   </h1>
   <div class="hero-bottom">
     <p class="hero-desc">
@@ -314,8 +321,6 @@ img{max-width:100%;height:auto;display:block;}
     </div>
   </div>
 </section>
-
-
 
 <section id="about">
   <div class="s-lbl reveal">About me</div>
@@ -392,6 +397,12 @@ img{max-width:100%;height:auto;display:block;}
         <div class="tl-chips"><span class="tl-chip">PL/SQL</span><span class="tl-chip">Shell</span><span class="tl-chip">ISO 20022</span><span class="tl-chip">Financial Messaging</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="marquee-banner">
+  <div class="marquee-container">
+    <span class="marquee-text">"All models are wrong, but some are useful!" - George Box</span>
   </div>
 </section>
 
@@ -483,7 +494,7 @@ img{max-width:100%;height:auto;display:block;}
     <div class="whoami-content">
       <div class="whoami-label">More About Me</div>
       <h2 class="whoami-title">Curious who I really am?</h2>
-      <p class="whoami-desc">Beyond code and data systems,there's more to explore. Check out my personal insights, interests, and the journey behind the engineer.</p>
+      <p class="whoami-desc">Beyond code and data systems, there's more to explore. Check out my personal insights, interests, and the journey behind the engineer.</p>
     </div>
     <div class="whoami-visual">
       <a href="whoami.html" class="whoami-btn">WHOAMI</a>
@@ -505,7 +516,7 @@ img{max-width:100%;height:auto;display:block;}
 </section>
 
 <footer>
-  <span>© 2025 Atharva Hirulkar</span>
+  <span>© 2026 Atharva Hirulkar</span>
   <span>Data Engineer · ML Engineer · UCSD</span>
 </footer>
 
