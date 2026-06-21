@@ -102,7 +102,8 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .tl-period{font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;}
 .tl-co{font-family:"Playfair Display",serif;font-weight:700;font-size:.95rem;margin-top:8px;}
 .tl-loc{font-size:.76rem;color:var(--muted);margin-top:4px;}
-.tl-role{font-family:"Playfair Display",serif;font-weight:700;font-size:1.25rem;margin-bottom:16px;letter-spacing:-0.02em;}
+.tl-role{font-family:"Playfair Display",serif;font-weight:700;font-size:1.25rem;margin-bottom:6px;letter-spacing:-0.02em;}
+.tl-team{font-size:.78rem;color:var(--accent);letter-spacing:.04em;margin-bottom:16px;font-weight:500;}
 .tl-ul{list-style:none;}
 .tl-ul li{font-size:.9rem;line-height:1.8;color:var(--muted);padding:5px 0 5px 18px;position:relative;}
 .tl-ul li::before{content:"-";position:absolute;left:0;color:var(--accent);font-size:.78rem;}
@@ -130,7 +131,6 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .pst span:not(:last-child)::after{content:"·";margin-left:12px;opacity:.4;}
 .proj-arr{font-size:1.4rem;color:var(--muted);align-self:center;transition:transform .3s,color .3s;}
 
-/* PRIZE BADGE */
 .prize-badge{display:inline-flex;align-items:center;gap:5px;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 11px;border:1px solid rgba(200,169,110,.35);border-radius:100px;color:var(--accent);background:rgba(200,169,110,.07);margin-top:10px;font-weight:500;transition:background .3s,border-color .3s,color .3s;}
 .prize-badge-icon{font-size:.72rem;}
 
@@ -263,7 +263,7 @@ img{max-width:100%;height:auto;display:block;}
 </nav>
 
 <section id="hero">
-  <div class="hero-eyebrow">ML Systems Engineer · Data Infrastructure · UC San Diego</div>
+  <div class="hero-eyebrow">ML Systems Engineer · Production ML Infrastructure · UC San Diego</div>
   <h1 class="hero-h1">
     <span class="ln"><span>Building data</span></span>
     <span class="ln"><span>systems that</span></span>
@@ -271,7 +271,7 @@ img{max-width:100%;height:auto;display:block;}
   </h1>
   <div class="hero-bottom">
     <p class="hero-desc">
-      ML Systems Engineer with <strong>2 years of production experience</strong> building the infrastructure AI runs on - real-time pipelines, feature stores, model serving, and the observability layer that keeps it all reliable. From streaming data at scale to deploying models in the cloud, I own the full production loop.
+      ML Systems Engineer with <strong>2.5 years of production experience</strong> building the infrastructure AI runs on - real-time pipelines, feature stores, model serving, and the observability layer that keeps it all reliable. From streaming data at scale to deploying models in the cloud, I own the full production loop.
     </p>
     <div class="hero-right">
       <a href="#projects" class="btn-main">View My Work</a>
@@ -290,25 +290,29 @@ img{max-width:100%;height:auto;display:block;}
       <h2 class="ab-title">I build the systems that make ML work <em>in production.</em></h2>
     </div>
     <div>
-      <p class="ab-para reveal">I'm an <strong>ML Systems Engineer</strong> with hands-on experience building production data infrastructure at serious scale. At <strong>State Street Corporation</strong>, I owned Snowflake pipelines processing ~5M records/day, monitored ~$1B in real-time transaction flows, and engineered ISO 20022-compliant payment workflows.</p>
-      <p class="ab-para reveal d1">I've architected <strong>multi-cloud infrastructure</strong> across AWS, Azure, and OCI using Terraform - and automated operations with Ansible, cutting provisioning time by ~40%. I care about reliability, not just velocity.</p>
-      <p class="ab-para reveal d2">Currently pursuing an <strong>MS in Data Science at UC San Diego</strong> (GPA 3.80), deepening expertise in scalable data systems, statistical NLP, and optimization. I hold a <strong>granted copyright</strong> in biomedical time-series ML.</p>
+      <p class="ab-para reveal">I'm an <strong>ML Systems Engineer</strong> building production ML systems end-to-end, from streaming data pipelines to model serving to RAG-powered explanations. At <strong>State Street Corporation</strong>, I spent 2.5 years building enterprise data infrastructure at scale: Snowflake pipelines processing <strong>5M+ records/day</strong>, multi-cloud automation across AWS, Azure, and OCI, and real-time monitoring for <strong>~$1B in transaction flows</strong>.</p>
+      <p class="ab-para reveal d1">I've architected <strong>multi-cloud infrastructure</strong> across AWS, Azure, and OCI using Terraform and automated operations with Ansible, cutting provisioning time by 40%. I care about reliability, not just velocity.</p>
+      <p class="ab-para reveal d2">Currently pursuing an <strong>MS in Data Science at UC San Diego</strong> (GPA 3.85), deepening expertise in ML systems, scalable data systems, machine learning, and causal inference. I hold a <strong>granted copyright</strong> from the Government of India in biomedical time-series ML.</p>
       <div class="sk-section reveal d3">
         <div class="sk-grp">
-          <div class="sk-cat">Data Systems</div>
-          <div class="sk-tags"><span class="sk-pill">ETL</span><span class="sk-pill">Snowflake</span><span class="sk-pill">Kafka</span><span class="sk-pill">Spark</span><span class="sk-pill">Airflow</span><span class="sk-pill">PostgreSQL</span><span class="sk-pill">TimescaleDB</span><span class="sk-pill">Neo4j</span><span class="sk-pill">Qdrant</span><span class="sk-pill">Data Warehousing</span></div>
-        </div>
-        <div class="sk-grp">
-          <div class="sk-cat">Machine Learning</div>
-          <div class="sk-tags"><span class="sk-pill">PyTorch</span><span class="sk-pill">TensorFlow</span><span class="sk-pill">Scikit-learn</span><span class="sk-pill">MLflow</span><span class="sk-pill">MLOps</span><span class="sk-pill">NLP</span><span class="sk-pill">Transformers</span><span class="sk-pill">Hugging Face</span> <span class="sk-pill">LLMs</span><span class="sk-pill">RAG</span><span class="sk-pill">Prompt Engineering</span><span class="sk-pill">Ollama</span><span class="sk-pill">OpenAI API</span><span class="sk-pill">LangChain</span><span class="sk-pill">Agentic AI</span><span class="sk-pill">Feature Engineering</span><span class="sk-pill">Anomaly Detection</span><span class="sk-pill">Time-Series Forecasting</span></div>
+          <div class="sk-cat">ML Systems & MLOps</div>
+          <div class="sk-tags"><span class="sk-pill">MLflow</span><span class="sk-pill">Model Registry</span><span class="sk-pill">Feature Pipelines</span><span class="sk-pill">PSI Drift Monitoring</span><span class="sk-pill">Model Serving</span><span class="sk-pill">Airflow</span><span class="sk-pill">FastAPI</span><span class="sk-pill">CI/CD</span></div>
         </div>
         <div class="sk-grp">
           <div class="sk-cat">Cloud & DevOps</div>
-          <div class="sk-tags"><span class="sk-pill">AWS</span><span class="sk-pill">Azure</span><span class="sk-pill">Oracle Cloud</span><span class="sk-pill">Terraform</span><span class="sk-pill">Ansible</span><span class="sk-pill">Docker</span><span class="sk-pill">Kubernetes</span><span class="sk-pill">CI/CD</span><span class="sk-pill">Grafana</span></div>
+          <div class="sk-tags"><span class="sk-pill">AWS</span><span class="sk-pill">Azure</span><span class="sk-pill">Oracle Cloud</span><span class="sk-pill">Terraform</span><span class="sk-pill">Ansible</span><span class="sk-pill">Docker</span><span class="sk-pill">Kubernetes</span><span class="sk-pill">GitHub Actions</span><span class="sk-pill">Grafana</span><span class="sk-pill">Prometheus</span></div>
+        </div>
+        <div class="sk-grp">
+          <div class="sk-cat">Data Engineering</div>
+          <div class="sk-tags"><span class="sk-pill">Kafka</span><span class="sk-pill">PySpark</span><span class="sk-pill">Snowflake</span><span class="sk-pill">PostgreSQL</span><span class="sk-pill">TimescaleDB</span><span class="sk-pill">Neo4j</span><span class="sk-pill">Qdrant</span><span class="sk-pill">Databricks Spark</span><span class="sk-pill">ETL</span></div>
+        </div>
+        <div class="sk-grp">
+          <div class="sk-cat">Machine Learning & GenAI</div>
+          <div class="sk-tags"><span class="sk-pill">PyTorch</span><span class="sk-pill">XGBoost</span><span class="sk-pill">LightGBM</span><span class="sk-pill">LSTM</span><span class="sk-pill">Scikit-learn</span><span class="sk-pill">SHAP</span><span class="sk-pill">RAG Pipelines</span><span class="sk-pill">LangChain</span><span class="sk-pill">OpenAI API</span><span class="sk-pill">Claude API</span><span class="sk-pill">Ollama</span><span class="sk-pill">Agentic AI</span><span class="sk-pill">Vector Search</span></div>
         </div>
         <div class="sk-grp">
           <div class="sk-cat">Programming & Tools</div>
-          <div class="sk-tags"><span class="sk-pill">Python</span><span class="sk-pill">SQL</span><span class="sk-pill">Shell / Bash</span><span class="sk-pill">Pandas</span><span class="sk-pill">NumPy</span><span class="sk-pill">NetworkX</span><span class="sk-pill">Plotly</span><span class="sk-pill">Matplotlib</span></div>
+          <div class="sk-tags"><span class="sk-pill">Python</span><span class="sk-pill">SQL</span><span class="sk-pill">Shell / Bash</span><span class="sk-pill">C++</span><span class="sk-pill">Pandas</span><span class="sk-pill">NumPy</span><span class="sk-pill">NetworkX</span><span class="sk-pill">Plotly</span></div>
         </div>
       </div>
     </div>
@@ -319,40 +323,63 @@ img{max-width:100%;height:auto;display:block;}
   <div class="s-lbl reveal">Career</div>
   <h2 class="sec-title reveal">Where I've <em>worked</em><br>& what I shipped.</h2>
   <div class="timeline">
+
     <div class="tl-item reveal">
       <div class="tl-dot"></div>
       <div class="tl-meta">
-        <div class="tl-period">Jul 2023 - Aug 2025</div>
+        <div class="tl-period">Apr 2025 - Aug 2025</div>
         <div class="tl-co">State Street Corp.</div>
-        <div class="tl-loc">Bangalore, India</div>
+        <div class="tl-loc">Bengaluru, India</div>
       </div>
       <div>
         <div class="tl-role">Data Engineer</div>
+        <div class="tl-team">Data Platforms</div>
         <ul class="tl-ul">
-          <li>Built and owned <strong>SQL + Python ETL pipelines on Snowflake</strong> processing <strong>5M+ records/day</strong>, ensuring <strong>99.9%+ uptime compliance</strong> with enterprise SLAs across production data workflows.</li>
-          <li>Architected and provisioned <strong>multi-cloud data infrastructure</strong> (OCI, AWS, Azure) using <strong>Terraform IaC</strong>, enabling <strong>scalable, zero-downtime deployments</strong> across production data pipelines.</li>
-          <li>Automated data environment provisioning and configuration using <strong>Ansible playbooks and Shell scripting</strong>, reducing manual operational overhead by <strong>40%</strong> across production data environments.</li>
-          <li>Implemented <strong>Azure DevOps CI/CD</strong> for data services, cutting release cycles by <strong>40% (5 days → 3 days)</strong> and achieving <strong>99.8% deployment success</strong> across cloud data workflows.</li>
+          <li><strong>Owned multi-cloud automation</strong> across OCI and Azure, designing Terraform IaC and Ansible playbooks adopted as the standard provisioning approach across teams; reduced manual overhead by <strong>40%</strong> while sustaining <strong>99.9%+ uptime</strong> on distributed production systems serving the global custodian.</li>
+          <li><strong>Drove enterprise database migration</strong> across <strong>150+ application teams</strong> as the lead on security architecture: designed IAM policies, RBAC, authentication workflows, and user provisioning from scratch, becoming the go-to engineer for security implementation across the program.</li>
+          <li><strong>Led Azure DevOps CI/CD adoption</strong> across globally distributed engineering teams by building the automation framework and mentoring deployment best practices, cutting release cycles by <strong>40% (5 days to 3)</strong> at <strong>99.8% deployment success</strong>.</li>
         </ul>
-        <div class="tl-chips"><span class="tl-chip">Python</span><span class="tl-chip">SQL</span><span class="tl-chip">Snowflake</span><span class="tl-chip">Terraform</span><span class="tl-chip">Ansible</span><span class="tl-chip">Azure DevOps</span><span class="tl-chip">AWS</span></div>
+        <div class="tl-chips"><span class="tl-chip">Terraform</span><span class="tl-chip">Ansible</span><span class="tl-chip">OCI</span><span class="tl-chip">Azure</span><span class="tl-chip">Azure DevOps</span><span class="tl-chip">IAM/RBAC</span><span class="tl-chip">CI/CD</span></div>
       </div>
     </div>
+
     <div class="tl-item reveal">
       <div class="tl-dot"></div>
       <div class="tl-meta">
-        <div class="tl-period">Jan 2023 - Jul 2023</div>
+        <div class="tl-period">Jul 2023 - Mar 2025</div>
+        <div class="tl-co">State Street Corp.</div>
+        <div class="tl-loc">Bengaluru, India</div>
+      </div>
+      <div>
+        <div class="tl-role">Platform Engineer</div>
+        <div class="tl-team">Data Platforms</div>
+        <ul class="tl-ul">
+          <li><strong>Engineered and owned production-grade Snowflake ETL pipelines</strong> processing <strong>5M+ records/day</strong> at <strong>99.9%+ SLA uptime</strong> on institutional data workflows; established data quality standards and validation frameworks adopted across the engineering team.</li>
+          <li><strong>Architected and automated multi-cloud environments</strong> (OCI, AWS, Azure) independently via Terraform IaC, cutting infrastructure provisioning time by <strong>50%</strong>; the design was later adopted as the standard provisioning approach across teams.</li>
+          <li><strong>Built a database automation tool</strong> with configurable filters that eliminated <strong>15 hours/week</strong> of manual data retrieval, identifying the inefficiency independently and shipping the solution without a formal assignment.</li>
+        </ul>
+        <div class="tl-chips"><span class="tl-chip">Python</span><span class="tl-chip">SQL</span><span class="tl-chip">Snowflake</span><span class="tl-chip">Terraform</span><span class="tl-chip">AWS</span><span class="tl-chip">Azure</span><span class="tl-chip">OCI</span></div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-meta">
+        <div class="tl-period">Jan 2023 - Jun 2023</div>
         <div class="tl-co">State Street Corp.</div>
         <div class="tl-loc">Hyderabad, India</div>
       </div>
       <div>
-        <div class="tl-role">Payment Systems Analyst - Intern</div>
+        <div class="tl-role">Payment Systems Analyst, Intern</div>
+        <div class="tl-team">Cash & Funds</div>
         <ul class="tl-ul">
-          <li>Built <strong>real-time monitoring dashboards for $1B daily transaction flows</strong> (LYNX, CHIPS, TARGET2), detecting <strong>98% of pipeline failures within 30 seconds</strong> and sustaining <strong>99.9% settlement uptime</strong>.</li>
-          <li>Engineered <strong>ISO 20022 payment data workflows</strong> in Shell and PL/SQL, raising <strong>data-validation accuracy from 96% to 99.4%</strong> on high-volume financial messaging pipelines.</li>
+          <li><strong>Built real-time monitoring systems</strong> across LYNX, CHIPS, and TARGET2 payment networks for <strong>~$1B in daily transaction flows</strong>, achieving <strong>98% failure detection within 30 seconds</strong> and sustaining <strong>99.9% settlement uptime</strong>.</li>
+          <li><strong>Engineered automated validation logic</strong> in PL/SQL and Shell for high-volume ISO 20022 payment workflows, raising data-validation accuracy from <strong>96% to 99.4%</strong> and reducing manual error resolution across the payments team.</li>
         </ul>
         <div class="tl-chips"><span class="tl-chip">PL/SQL</span><span class="tl-chip">Shell</span><span class="tl-chip">ISO 20022</span><span class="tl-chip">Financial Messaging</span></div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -367,7 +394,7 @@ img{max-width:100%;height:auto;display:block;}
   <h2 class="sec-title reveal">Things I've <em>built.</em></h2>
   <div>
 
-     <div class="proj-item reveal">
+    <div class="proj-item reveal">
       <div class="proj-num">01</div>
       <div>
         <div class="proj-name">FraudLens</div>
@@ -376,7 +403,7 @@ img{max-width:100%;height:auto;display:block;}
       </div>
       <div class="proj-arr"><a href="https://github.com/atharvahirulkar/fraudlens" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
- 
+
     <div class="proj-item reveal">
       <div class="proj-num">02</div>
       <div>
@@ -386,9 +413,21 @@ img{max-width:100%;height:auto;display:block;}
       </div>
       <div class="proj-arr"><a href="https://github.com/atharvahirulkar/SignalStack" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
- 
+
     <div class="proj-item reveal">
       <div class="proj-num">03</div>
+      <div>
+        <div class="proj-name">Chokepoint<span class="pat">Bow Capital Defense Hackathon 2026</span></div>
+        <div class="prize-badge"><span class="prize-badge-icon">🏆</span> Hackathon Winner</div>
+        <a href="https://atharvahirulkar-chokepoint.hf.space" target="_blank" style="font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;display:inline-block;margin-top:10px;margin-bottom:10px;">→ Live Demo</a>
+        <div class="proj-desc">Defense procurement supply-graph intelligence. Ingests 9.1M USAspending contract rows across FY2024 to FY2026, builds a bipartite vendor to agency to NAICS graph (49,842 vendors, 228K weighted edges), and ranks every vendor by N-1 contingency failure impact. GradientBoosting trained on simulated coverage-drop labels hits recall@10 = 0.80, doubling the centrality baseline. Validated against 10 real defense supply-chain disruptions: 6 of 10 in the top 1 percent of 49,842 vendors, median 99.16th percentile. Sub-millisecond live stress simulator deployed on Hugging Face Spaces.</div>
+        <div class="pst"><span>Python</span><span>NetworkX</span><span>GradientBoosting</span><span>IsolationForest</span><span>FastAPI</span><span>Streamlit</span><span>Docker</span><span>Hugging Face Spaces</span></div>
+      </div>
+      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/chokepoint" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
+    </div>
+
+    <div class="proj-item reveal">
+      <div class="proj-num">04</div>
       <div>
         <div class="proj-name">Seismic Risk Atlas<span class="pat">DataHacks 2026</span></div>
         <div class="prize-badge"><span class="prize-badge-icon">🏆</span> Best Use of Marimo &amp; Sphinx</div>
@@ -399,28 +438,17 @@ img{max-width:100%;height:auto;display:block;}
         <a href="https://github.com/Varad02/SeismicRiskAtlas" target="_blank" style="color:inherit;text-decoration:none;">↗</a>
       </div>
     </div>
- 
-    <div class="proj-item reveal">
-      <div class="proj-num">04</div>
-      <div>
-        <div class="proj-name">CosmeTik</div>
-        <div class="proj-desc">Multi-database skincare analytics platform. Unified product + review pipeline across PostgreSQL, Neo4j (entity graphs), and Qdrant (vector search). 1M+ reviews, hybrid ML recommender with 30 ingredient communities detected via PageRank and Louvain clustering.</div>
-        <div class="pst"><span>PostgreSQL</span><span>Neo4j</span><span>Qdrant</span><span>Python</span><span>NLP</span><span>Recommendation Engine</span></div>
-      </div>
-      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/cosmetik" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
-    </div>
- 
+
     <div class="proj-item reveal">
       <div class="proj-num">05</div>
       <div>
-        <div class="proj-name">Chokepoint<span class="pat">Bow Capital Defense Hackathon 2026</span></div>
-        <a href="https://atharvahirulkar-chokepoint.hf.space" target="_blank" style="font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;display:inline-block;margin-bottom:10px;">→ Live Demo</a>
-        <div class="proj-desc">Defense procurement supply-graph intelligence. Ingests 9.1M USAspending contract rows across FY2024 to FY2026, builds a bipartite vendor to agency to NAICS graph (49,842 vendors, 228K weighted edges), and ranks every vendor by N-1 contingency failure impact. GradientBoosting trained on simulated coverage-drop labels hits recall@10 = 0.80, doubling the centrality baseline. Validated against 10 real defense supply-chain disruptions: 6 of 10 in the top 1 percent of 49,842 vendors, median 99.16th percentile. Sub-millisecond live stress simulator deployed on Hugging Face Spaces.</div>
-        <div class="pst"><span>Python</span><span>NetworkX</span><span>GradientBoosting</span><span>IsolationForest</span><span>FastAPI</span><span>Streamlit</span><span>Docker</span><span>Hugging Face Spaces</span></div>
+        <div class="proj-name">CosmeTik</div>
+        <div class="proj-desc">Multi-database skincare analytics platform with unified product + review pipeline across PostgreSQL, Neo4j (entity graphs), and Qdrant (vector search). 1M+ reviews ingested with consistency-managed derived stores rebuilt from PostgreSQL source of truth. Detected 30 ingredient communities via PageRank + Louvain clustering; hybrid ML recommender combines graph community signals with semantic similarity over review embeddings.</div>
+        <div class="pst"><span>PostgreSQL</span><span>Neo4j</span><span>Qdrant</span><span>NetworkX</span><span>sentence-transformers</span><span>FastAPI</span><span>Python</span></div>
       </div>
-      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/chokepoint" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
+      <div class="proj-arr"><a href="https://github.com/atharvahirulkar/cosmetik" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
- 
+
     <div class="proj-item reveal">
       <div class="proj-num">06</div>
       <div>
@@ -430,7 +458,7 @@ img{max-width:100%;height:auto;display:block;}
       </div>
       <div class="proj-arr"><a href="https://github.com/atharvahirulkar/irona" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
- 
+
     <div class="proj-item reveal">
       <div class="proj-num">07</div>
       <div>
@@ -440,7 +468,7 @@ img{max-width:100%;height:auto;display:block;}
       </div>
       <div class="proj-arr"><a href="https://github.com/atharvahirulkar/JobPilot" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
- 
+
     <div class="proj-item reveal">
       <div class="proj-num">08</div>
       <div>
@@ -450,7 +478,7 @@ img{max-width:100%;height:auto;display:block;}
       </div>
       <div class="proj-arr"><a href="https://github.com/atharvahirulkar/pulseml" target="_blank" style="color:inherit;text-decoration:none;">↗</a></div>
     </div>
- 
+
     <div class="proj-item reveal">
       <div class="proj-num">09</div>
       <div>
@@ -469,8 +497,8 @@ img{max-width:100%;height:auto;display:block;}
   <h2 class="cert-ttl reveal">Credentials &<br><em>in progress.</em></h2>
   <div class="cert-grid reveal">
     <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#c8960c" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="#c8960c" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="#c8960c" stroke-width="1.8" stroke-linejoin="round"/></svg></div><div class="cert-nm">JP Morgan Quantitative Research</div><div class="cert-st ok">✓ Certified</div></div>
-    <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="#3a6fd8" stroke-width="1.8"/><path d="M18 18l3 3" stroke="#3a6fd8" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="3" fill="#3a6fd8" opacity="0.3"/></svg></div><div class="cert-nm">Qdrant Vector DB Essentials</div><div class="cert-st wip">✓ Certified</div></div>
-    <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="12" r="2.5" stroke="#2e6db4" stroke-width="1.8"/><circle cx="19" cy="5" r="2.5" stroke="#2e6db4" stroke-width="1.8"/><circle cx="19" cy="19" r="2.5" stroke="#2e6db4" stroke-width="1.8"/><line x1="7.2" y1="10.8" x2="16.9" y2="6.4" stroke="#2e6db4" stroke-width="1.5"/><line x1="7.2" y1="13.2" x2="16.9" y2="17.6" stroke="#2e6db4" stroke-width="1.5"/><line x1="16.9" y1="7.5" x2="16.9" y2="16.5" stroke="#2e6db4" stroke-width="1.5" stroke-dasharray="2 2"/></svg></div><div class="cert-nm">Qdrant Multi-Vector Search</div><div class="cert-st wip">✓ Certified</div></div>
+    <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="#3a6fd8" stroke-width="1.8"/><path d="M18 18l3 3" stroke="#3a6fd8" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="3" fill="#3a6fd8" opacity="0.3"/></svg></div><div class="cert-nm">Qdrant Vector DB Essentials</div><div class="cert-st ok">✓ Certified</div></div>
+    <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="12" r="2.5" stroke="#2e6db4" stroke-width="1.8"/><circle cx="19" cy="5" r="2.5" stroke="#2e6db4" stroke-width="1.8"/><circle cx="19" cy="19" r="2.5" stroke="#2e6db4" stroke-width="1.8"/><line x1="7.2" y1="10.8" x2="16.9" y2="6.4" stroke="#2e6db4" stroke-width="1.5"/><line x1="7.2" y1="13.2" x2="16.9" y2="17.6" stroke="#2e6db4" stroke-width="1.5"/><line x1="16.9" y1="7.5" x2="16.9" y2="16.5" stroke="#2e6db4" stroke-width="1.5" stroke-dasharray="2 2"/></svg></div><div class="cert-nm">Qdrant Multi-Vector Search</div><div class="cert-st ok">✓ Certified</div></div>
     <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="2.5" stroke="#197a40" stroke-width="1.8"/><circle cx="4" cy="18" r="2.5" stroke="#197a40" stroke-width="1.8"/><circle cx="20" cy="18" r="2.5" stroke="#197a40" stroke-width="1.8"/><line x1="12" y1="7.5" x2="5.2" y2="16" stroke="#197a40" stroke-width="1.5"/><line x1="12" y1="7.5" x2="18.8" y2="16" stroke="#197a40" stroke-width="1.5"/><line x1="6.5" y1="18" x2="17.5" y2="18" stroke="#197a40" stroke-width="1.5"/></svg></div><div class="cert-nm">Neo4j Graph Data Science</div><div class="cert-st ok">✓ Certified</div></div>
     <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12c0-4.97 4.03-9 9-9s9 4.03 9 9" stroke="#c05020" stroke-width="1.8" stroke-linecap="round"/><path d="M7 17c.5-3 2.5-5 5-5s4.5 2 5 5" stroke="#c05020" stroke-width="1.8" stroke-linecap="round"/><path d="M10.5 21a7 7 0 003 0" stroke="#c05020" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="1.5" fill="#c05020"/></svg></div><div class="cert-nm">OCI Architect Associate</div><div class="cert-st ok">✓ Certified</div></div>
     <div class="cert-card"><div class="cert-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke="#1a56b0" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 3v18" stroke="#1a56b0" stroke-width="1.2" stroke-dasharray="2 2"/><path d="M4 7.5l8 4.5 8-4.5" stroke="#1a56b0" stroke-width="1.2"/></svg></div><div class="cert-nm">OCI Foundations Associate</div><div class="cert-st ok">✓ Certified</div></div>
@@ -485,8 +513,8 @@ img{max-width:100%;height:auto;display:block;}
     <div class="edu-card reveal">
       <div class="edu-sch">University of California, San Diego</div>
       <div class="edu-deg">M.S. in Data Science · Sept 2025 - Dec 2026</div>
-      <div class="edu-gpa">3.80 <span>/ 4.00 GPA</span></div>
-      <div class="edu-crs">ML Systems · Causal Inference · Optimization · Scalable Data Systems · Statistical NLP · Advanced Data Mining · Data Ethics</div>
+      <div class="edu-gpa">3.85 <span>/ 4.00 GPA</span></div>
+      <div class="edu-crs">ML Systems · Scalable Data Systems · Machine Learning · Statistical Models · Algorithms for Data Science · Causal Inference · Optimization</div>
     </div>
     <div class="edu-card reveal d2">
       <div class="edu-sch">Savitribai Phule Pune University</div>
@@ -525,15 +553,13 @@ img{max-width:100%;height:auto;display:block;}
 
 <footer>
   <span>© 2026 Atharva Hirulkar</span>
-  <span>ML Systems Engineer · Data Infrastructure · UCSD</span>
+  <span>ML Systems Engineer · Production ML Infrastructure · UCSD</span>
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// LOADER
 const ldr=document.getElementById("loader"),lp=document.getElementById("lpct");
 let n=0;const iv=setInterval(()=>{n+=Math.random()*18;if(n>=100){n=100;clearInterval(iv);setTimeout(()=>ldr.classList.add("gone"),320);}lp.textContent=Math.floor(n);},75);
 
-// CURSOR
 const cur=document.getElementById("cur"),ring=document.getElementById("cur-ring");
 document.addEventListener("mousemove",e=>{
   cur.style.left=e.clientX+"px";cur.style.top=e.clientY+"px";
@@ -544,7 +570,6 @@ document.querySelectorAll("a,button,.proj-item,.sk-pill").forEach(el=>{
   el.addEventListener("mouseleave",()=>document.body.classList.remove("lh"));
 });
 
-// SCROLL REVEAL
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("vis");});},{threshold:.1,rootMargin:"0px 0px -40px 0px"});
 document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
 </script>
