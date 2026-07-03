@@ -20,18 +20,17 @@ html{scroll-behavior:smooth;overflow-x:hidden;}
   --accent:#c8a96e;
   --border:rgba(14,13,11,0.1);
 }
-body{background:var(--cream);color:var(--black);font-family:"DM Sans",sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
+body{background:var(--cream);color:var(--black);font-family:"DM Sans",sans-serif;font-weight:300;overflow-x:hidden;}
 
-#cur{position:fixed;width:10px;height:10px;background:#a8d8d8;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s;mix-blend-mode:normal;}
-#cur-ring{position:fixed;width:40px;height:40px;border:1.5px solid #a8d8d8;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s ease,top .1s ease,width .2s,height .2s;mix-blend-mode:normal;}
-body.lh #cur{width:12px;height:12px;}
-body.lh #cur-ring{width:60px;height:60px;}
-
+/* LOADER */
 #loader{position:fixed;inset:0;z-index:9999;background:var(--black);display:flex;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s;}
 #loader.gone{opacity:0;visibility:hidden;}
 .l-pct{font-family:"Playfair Display",serif;font-size:clamp(5rem,12vw,10rem);color:var(--cream);font-weight:900;line-height:1;letter-spacing:-0.04em;}
 .l-lbl{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(240,235,227,.35);margin-top:12px;text-align:center;}
 
+
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px 56px;mix-blend-mode:multiply;backdrop-filter: blur(20px);background: rgba(240,235,227,0.65);transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .35s ease,background .35s ease,padding .35s ease;}
 .nav-logo{font-family:"Playfair Display",serif;font-weight:700;font-size:1.1rem;color:var(--black);text-decoration:none;letter-spacing:-0.01em;}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center;}
@@ -44,7 +43,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 .nav-personal:hover{background:var(--accent) !important;}
 .nav-personal::after{display:none !important;}
 nav.hide-nav{transform: translateY(-110%);opacity:0;}
+  
 
+/* HERO */
 #hero{min-height:100vh;padding:160px 56px 80px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
 .hero-eyebrow{font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;display:flex;align-items:center;gap:12px;opacity:0;animation:fadeUp .7s .8s forwards;}
 .hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--muted);}
@@ -63,7 +64,9 @@ h1.hero-h1{font-family:"Playfair Display",serif;font-size:clamp(3.8rem,8.5vw,8.5
 .hero-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
 .btn-main{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:var(--black);color:var(--cream);text-decoration:none;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s,transform .2s;}
 .btn-main:hover{background:var(--black2);transform:translateY(-2px);}
+.hero-hint{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
 
+/* SECTIONS */
 section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .s-lbl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:64px;display:flex;align-items:center;gap:12px;font-weight:500;}
 .s-lbl::before{content:"";width:24px;height:1px;background:var(--muted);}
@@ -72,12 +75,14 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .s-lbl.lt::before{background:rgba(240,235,227,.3);}
 .s-lbl.lt::after{background:rgba(240,235,227,.3);}
 
+/* ABOUT */
 #about{background:var(--cream);}
 .about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:96px;align-items:start;}
 .about-left{position:sticky;top:120px;}
 .ab-photo-wrap{position:relative;margin-bottom:32px;}
 .ab-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block;}
 .ab-photo-frame{position:absolute;inset:-8px -8px auto auto;width:60%;height:60%;border:1.5px solid var(--accent);z-index:-1;}
+.ab-num{font-family:"Playfair Display",serif;font-size:clamp(5rem,8vw,8rem);font-weight:900;line-height:1;color:rgba(14,13,11,.05);letter-spacing:-0.05em;margin-bottom:16px;}
 .ab-title{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.6rem,2.5vw,2.2rem);line-height:1.2;letter-spacing:-0.025em;}
 .ab-title em{font-style:italic; font-weight: 400; color: var(--muted);}
 .ab-para{font-size:1rem;line-height:1.85;color:var(--muted);margin-bottom:28px;}
@@ -89,6 +94,7 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .sk-pill{padding:5px 13px;font-size:.78rem;border:1px solid var(--border);border-radius:2px;color:var(--ink);background:transparent;transition:background .2s,border-color .2s,color .2s;cursor:default;}
 .sk-pill:hover{background:var(--black);color:var(--cream);border-color:var(--black);}
 
+/* EXPERIENCE */
 #experience{background:var(--cream2);}
 .sec-title{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,4rem);line-height:1.05;letter-spacing:-0.04em;margin-bottom:80px;}
 .sec-title em{font-style:italic;font-weight:400;color:var(--muted);}
@@ -111,6 +117,7 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .tl-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
 .tl-chip{padding:3px 10px;font-size:.7rem;border:1px solid var(--border);border-radius:2px;color:var(--muted);letter-spacing:.04em;}
 
+/* PROJECTS */
 #projects{background:var(--cream);}
 .proj-item{display:grid;grid-template-columns:80px 1fr 40px;gap:40px;align-items:start;padding:48px 0;border-top:1px solid var(--border);position:relative;cursor:pointer;}
 .proj-item:last-child{border-bottom:1px solid var(--border);}
@@ -134,6 +141,7 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .prize-badge{display:inline-flex;align-items:center;gap:5px;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 11px;border:1px solid rgba(200,169,110,.35);border-radius:100px;color:var(--accent);background:rgba(200,169,110,.07);margin-top:10px;font-weight:500;transition:background .3s,border-color .3s,color .3s;}
 .prize-badge-icon{font-size:.72rem;}
 
+/* CERTS */
 #certs{background:var(--black);}
 .cert-ttl{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,4rem);line-height:1.05;letter-spacing:-0.04em;color:var(--cream);margin-bottom:64px;}
 .cert-ttl em{font-style:italic;color:var(--accent);}
@@ -146,6 +154,7 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .cert-st.ok{color:var(--accent);}
 .cert-st.wip{color:var(--muted);}
 
+/* EDUCATION */
 #education{background:var(--cream2);}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
 .edu-card{padding:48px;border:1px solid var(--border);border-radius:3px;transition:transform .3s,box-shadow .3s;}
@@ -156,6 +165,7 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .edu-gpa span{font-size:.95rem;color:var(--muted);font-family:"DM Sans",sans-serif;font-weight:300;}
 .edu-crs{font-size:.8rem;color:var(--muted);line-height:1.7;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
 
+/* CONTACT */
 #contact{background:var(--black);min-height:55vh;display:flex;flex-direction:column;justify-content:center;}
 .ct-big{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.8rem,7vw,6.5rem);line-height:.95;letter-spacing:-0.04em;color:var(--cream);margin-bottom:64px;}
 .ct-big em{font-style:italic;color:var(--accent);}
@@ -170,10 +180,12 @@ section{padding:120px 56px;border-bottom:1px solid var(--border);}
 .ct-link:hover{color:var(--cream);}
 .ct-link:hover::after{width:100%;}
 
+/* QUOTE BAND */
 #marquee-banner{background:var(--black);padding:24px 56px;border-bottom:1px solid var(--border);overflow:hidden;}
 .marquee-container{display:flex;align-items:center;justify-content:center;}
 .marquee-text{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.2rem,3vw,2.2rem);color:#c8a96e;letter-spacing:-0.025em;text-align:center;}
 
+/* WHOAMI BANNER */
 #whoami-banner{background:var(--cream2);padding:80px 56px;border-bottom:1px solid var(--border);}
 .whoami-wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:36px;background:var(--cream);border:1.5px solid var(--accent);border-radius:4px;position:relative;overflow:hidden;}
 .whoami-wrap::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,169,110,0.05) 0%,transparent 100%);pointer-events:none;}
@@ -193,43 +205,66 @@ footer{padding:22px 56px;background:var(--black);display:flex;justify-content:sp
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @keyframes lineUp{from{opacity:1;transform:translateY(105%)}to{opacity:1;transform:translateY(0)}}
 
+/* global image safety net */
 img{max-width:100%;height:auto;display:block;}
 
 @media(max-width:900px){
-  #cur,#cur-ring{display:none;}
-  body{cursor:auto;}
+  /* nav */
   nav{padding:16px 20px;}
   .nav-links li:not(:last-child){display:none;}
   .nav-logo{font-size:.95rem;}
+
+  /* hero */
   #hero{padding:120px 20px 56px;min-height:100svh;}
   .hero-bottom{flex-direction:column;align-items:flex-start;gap:24px;margin-top:40px;}
   .hero-desc{max-width:100%;font-size:.95rem;}
   .hero-right{align-items:flex-start;}
+  .btn-main{width:auto;justify-content:center;}
+
+  /* sections */
   section{padding:72px 20px;}
+
+  /* about */
   .about-grid{grid-template-columns:1fr;gap:40px;}
   .about-left{position:static;}
   .ab-photo{aspect-ratio:4/3;object-position:center 15%;width:100%;}
   .ab-photo-frame{display:none;}
   .ab-photo-wrap{margin-bottom:20px;}
+
+  /* timeline */
   .timeline::before{display:none;}
   .tl-item{grid-template-columns:1fr;gap:6px;padding:32px 0;}
   .tl-meta{text-align:left;padding-right:0;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;}
   .tl-co{margin-top:0;}
   .tl-dot{display:none;}
   .tl-role{font-size:1.1rem;margin-top:12px;}
+
+  /* projects */
   .proj-item{grid-template-columns:1fr;gap:10px;padding:32px 0;}
   .proj-item::before{inset:0 -20px;}
   .proj-num,.proj-arr{display:none;}
   .proj-name{font-size:1.2rem;}
+
+  /* certs */
   .cert-grid{grid-template-columns:1fr 1fr;}
   .cert-card{padding:28px 20px;}
+
+  /* education */
   .edu-grid{grid-template-columns:1fr;}
   .edu-card{padding:32px 24px;}
+
+  /* contact */
   #contact{min-height:auto;padding:72px 20px;}
   .ct-row{flex-direction:column;align-items:flex-start;gap:28px;}
+
+  /* quote band */
   #marquee-banner{padding:20px 20px;}
+
+  /* whoami */
   #whoami-banner{padding:60px 20px;}
   .whoami-wrap{flex-direction:column;gap:24px;padding:28px 20px;}
+
+  /* footer */
   footer{padding:20px;flex-direction:column;gap:8px;}
 }
 
@@ -248,8 +283,9 @@ img{max-width:100%;height:auto;display:block;}
 <body>
 
 <div id="loader"><div><div class="l-pct" id="lpct">0</div><div class="l-lbl">Loading</div></div></div>
-<div id="cur"></div>
-<div id="cur-ring"></div>
+
+<!-- MUSIC -->
+
 
 <nav class="navbar">
   <a href="#hero" class="nav-logo">atharva@world</a>
@@ -271,7 +307,7 @@ img{max-width:100%;height:auto;display:block;}
   </h1>
   <div class="hero-bottom">
     <p class="hero-desc">
-      ML Systems Engineer with <strong>2.5 years of production experience</strong> building the infrastructure AI runs on - real-time pipelines, feature stores, model serving, and the observability layer that keeps it all reliable. From streaming data at scale to deploying models in the cloud, I own the full production loop.
+      ML Systems Engineer with <strong>3 years of production experience</strong> building the infrastructure AI runs on - real-time pipelines, feature stores, model serving, and the observability layer that keeps it all reliable. From streaming data at scale to deploying models in the cloud, I own the full production loop.
     </p>
     <div class="hero-right">
       <a href="#projects" class="btn-main">View My Work</a>
@@ -287,10 +323,11 @@ img{max-width:100%;height:auto;display:block;}
         <img src="img/profile.jpg" alt="Atharva Hirulkar" class="ab-photo"/>
         <div class="ab-photo-frame"></div>
       </div>
+      <!-- <div class="ab-num">01</div> -->
       <h2 class="ab-title">I build the systems that make ML work <em>in production.</em></h2>
     </div>
     <div>
-      <p class="ab-para reveal">I'm an <strong>ML Systems Engineer</strong> building production ML systems end-to-end, from streaming data pipelines to model serving to RAG-powered explanations. At <strong>State Street Corporation</strong>, I spent 2.5 years building enterprise data infrastructure at scale: Snowflake pipelines processing <strong>5M+ records/day</strong>, multi-cloud automation across AWS, Azure, and OCI, and real-time monitoring for <strong>~$1B in transaction flows</strong>.</p>
+      <p class="ab-para reveal">I'm an <strong>ML Systems Engineer</strong> building production ML systems end-to-end, from streaming data pipelines to model serving to RAG-powered explanations. At <strong>State Street Corporation</strong>, I spent 3 years building enterprise data infrastructure at scale: Snowflake pipelines processing <strong>5M+ records/day</strong>, multi-cloud automation across AWS, Azure, and OCI, and real-time monitoring for <strong>~$1B in transaction flows</strong>.</p>
       <p class="ab-para reveal d1">I've architected <strong>multi-cloud infrastructure</strong> across AWS, Azure, and OCI using Terraform and automated operations with Ansible, cutting provisioning time by 40%. I care about reliability, not just velocity.</p>
       <p class="ab-para reveal d2">Currently pursuing an <strong>MS in Data Science at UC San Diego</strong> (GPA 3.85), deepening expertise in ML systems, scalable data systems, machine learning, and causal inference. I hold a <strong>granted copyright</strong> from the Government of India in biomedical time-series ML.</p>
       <div class="sk-section reveal d3">
@@ -556,45 +593,49 @@ img{max-width:100%;height:auto;display:block;}
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// LOADER
 const ldr=document.getElementById("loader"),lp=document.getElementById("lpct");
 let n=0;const iv=setInterval(()=>{n+=Math.random()*18;if(n>=100){n=100;clearInterval(iv);setTimeout(()=>ldr.classList.add("gone"),320);}lp.textContent=Math.floor(n);},75);
 
-const cur=document.getElementById("cur"),ring=document.getElementById("cur-ring");
-document.addEventListener("mousemove",e=>{
-  cur.style.left=e.clientX+"px";cur.style.top=e.clientY+"px";
-  setTimeout(()=>{ring.style.left=e.clientX+"px";ring.style.top=e.clientY+"px";},80);
-});
-document.querySelectorAll("a,button,.proj-item,.sk-pill").forEach(el=>{
-  el.addEventListener("mouseenter",()=>document.body.classList.add("lh"));
-  el.addEventListener("mouseleave",()=>document.body.classList.remove("lh"));
-});
-
+// SCROLL REVEAL
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("vis");});},{threshold:.1,rootMargin:"0px 0px -40px 0px"});
 document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
-</script>
 
+// Music removed
+</script>
+  
 <script>
 let lastScroll = 0;
 const navbar = document.querySelector("nav");
+
 window.addEventListener("scroll", () => {
+
   const currentScroll = window.scrollY;
+
   if(currentScroll > lastScroll && currentScroll > 80){
     navbar.classList.add("hide-nav");
   } else {
     navbar.classList.remove("hide-nav");
   }
+
   lastScroll = currentScroll;
+
 });
 </script>
+
 
 <script>
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links a");
+
 window.addEventListener("scroll", () => {
+
   let current = "";
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 150;
     const sectionHeight = section.clientHeight;
+
     if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight){
       current = section.getAttribute("id");
     }
@@ -606,7 +647,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-</script>
-
-</body>
-</html>
